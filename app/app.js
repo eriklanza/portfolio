@@ -1,8 +1,13 @@
 'use strict';
  
 angular.module('myApp', [
-  'ngRoute'
+    'ngRoute',
+    'myApp.home'           // Newly added home module
 ]).
 config(['$routeProvider', function($routeProvider) {
-     // Routes will be here
+    // Set defualt view of our app to home
+     
+    $routeProvider.otherwise({
+        redirectTo: '/home'
+    });
 }]);
